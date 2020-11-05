@@ -9,7 +9,7 @@ $host        = "host = ec2-52-73-199-211.compute-1.amazonaws.com";
 <?php
    
    public function getEmployees() {
-		$sql = "SELECT * FROM customer";
+		$sql = "SELECT * FROM customers";
 		$queryRecords = pg_query($db, $sql);
 		$data = pg_fetch_all($queryRecords);
 		return $data;
