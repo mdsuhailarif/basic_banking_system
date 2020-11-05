@@ -8,7 +8,7 @@ $host        = "host = ec2-52-73-199-211.compute-1.amazonaws.com";
 
 $sql =<<<EOF
    CREATE TABLE IF NOT EXISTS customers
-   (USERNAME CHAR(TEXT) ,
+   (USERNAME TEXT,
     EMAIL TEXT  NOT NULL UNIQUE Primary Key,
     CURRENT_BALANCE REAL); 
 EOF;
