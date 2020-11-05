@@ -1,0 +1,83 @@
+
+  /* title section */
+  #title{
+    background: #bc6ff1;
+    padding: 2% 2%;
+    text-align: left;
+  }
+  /* #title primary section */
+  .container-fluid{
+    padding: 2% 0;
+
+  }
+
+
+   /* features section */
+
+   #features{
+     text-align: center;
+     padding: 10% 15%;
+   }
+  .icon{
+    color:#ff4c68;
+    margin-bottom: 1rem;
+  }
+  .icon:hover{
+    color:#bc6ff1;
+  }
+
+
+
+
+  /* candy-bANK LOGO */
+  .logo{
+    position: relative;
+    right: 50px;
+    margin-right: 20px;
+  }
+
+  h1,h2{
+    font-weight: bold;
+    color: #fff;
+    text-align: left;
+
+  }
+
+  /* Heding H1 and Get-started nutton */
+  .First-sec{
+    padding: 3% 0 10% 3%;
+
+  }
+  /* carousel-slider images */
+  .images-slider{
+    width: 60%;
+    margin-right: 20px;
+  }
+
+
+  /* cta */
+  #cta{
+    background-color: #bc6ff1;
+    padding: 7% 15%;
+    text-align: center;
+    line-height: 1.5;
+    color: #fff;
+  }
+
+
+
+  /* footer */
+  #footer{
+    padding: 4% 15%;
+    text-align: center;
+  }
+  .social-icon{
+    margin: 2% 2%;
+  }
+
+  /* Heding and cta H1 text */
+  .main-text{
+    font-size: 3rem;
+    line-height: 1.5;
+    padding: 10px 0px;
+  }
