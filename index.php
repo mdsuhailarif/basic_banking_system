@@ -11,10 +11,17 @@ if($db)
 else
 {echo "Failed";}
 
-$sql ="INSERT INTO customers VALUES("Kundan","candyboy6646@gmail.com",11000)";
+$sql ="INSERT INTO customers VALUES('Kundan','candyboy6646@gmail.com',11000)";
 
  
 $ret = pg_query($db, $sql);
+if(!$ret) {
+   		   echo "Failed";
+   		} 
+		 else {
+   		   echo "Inserted";
+   		}
+
    pg_close($db); 
 include_once("homepage.html");
 
