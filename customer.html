@@ -1,7 +1,4 @@
-<?php
-    include_once("response.php");
-    $emps = getEmployees();
- ?>
+
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
 
@@ -74,17 +71,23 @@
 		    <tr>
 			    <th>Name</th>
 			    <th>Email</th>
-			    <th>Balance</th>
+			    <th>balance</th>
 		    </tr>
 	    </thead>
 	    <tbody>
-		    <?php foreach($emps as $key); ?>
-		    <tr>
-			    <td><?php echo $key['username'] ?></td>
-			    <td><?php echo $key['email'] ?></td>
-			    <td><?php echo $key['current_balance'] ?></td>
-		  	</tr>
-	      <?php endforeach; ?>
+		    <?php  
+			include("response.php");
+   		 	$emps = getEmployees();
+
+		foreach($emps as $key)
+		{
+		    	echo "<tr>";
+			    echo "<td>" $key['username']"</td>";
+			    echo "<td>" $key['email']"</td>";
+			    echo "<td>" $key['current_balance'] "</td>";
+		  	echo "</tr>";
+		}
+	      ?>
 	    </tbody>
     </table>
   </section>
