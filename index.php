@@ -6,6 +6,11 @@ $host        = "host = ec2-52-73-199-211.compute-1.amazonaws.com";
 
    $db = pg_connect( "$host $port $dbname $credentials"  );
 
+if($db)
+{echo "DONE";}
+else
+{echo "Failed";}
+
 $sql =<<<EOF
    CREATE TABLE IF NOT EXISTS customers
    (USERNAME TEXT,
