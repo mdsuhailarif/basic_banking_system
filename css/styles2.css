@@ -16,7 +16,7 @@
     text-align: center;
     padding-top: 1px;
   }
-  * The popup form - hidden by default */
+ /* The popup form - hidden by default */
 .form-popup {
   display: none;
   position: fixed;
