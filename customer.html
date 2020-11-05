@@ -25,7 +25,20 @@
           <a href="homepage.html"><img src="images/logo.png" alt=""></a>
           <h1>Customers</h1>
           <a href="homepage.html"><button type="button"  class="btn btn-dark btn-lg download-button"><i class="fa fa-home" aria-hidden="true"></i> Home</button></a>
-          <button type="button" class="btn btn-outline-dark btn-lg download-button"><i class="fa fa-money" aria-hidden="true"></i> Transfer Money</button>
+          <button type="button" class="btn btn-outline-dark btn-lg download-button" onclick="openForm()"><i class="fa fa-money" aria-hidden="true"></i> Transfer Money</button>
+          <div class="form-popup" id="myForm">
+           <form action="action.php" class="form-container">
+  
+              <label for="email"><b>Username</b></label>
+              <input type="text" placeholder="Enter Email" name="email" required>
+
+              <label for="psw"><b>amount</b></label>
+              <input type="password" placeholder="Enter Password" name="psw" required>
+
+              <button type="submit" class="btn">Login</button>
+              <button type="button" class="btn cancel" onclick="closeForm()">Close</button>
+            </form>
+        </div>
         </div>
         <div class="col-lg-6">
           <a href="https://www.who.int/emergencies/diseases/novel-coronavirus-2019/advice-for-public"><img src="images/cus-back.jpg" class="title-image" alt="customer-satisfaction" width="100%"></a>
