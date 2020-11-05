@@ -78,13 +78,13 @@
 		    </tr>
 	    </thead>
 	    <tbody>
-		    <?php foreach($emps as $key => $emp){
+		    <?php foreach($emps as $key => $emp); ?>
 		    <tr>
 			    <td><?php echo $emp['username'] ?></td>
 			    <td><?php echo $emp['email'] ?></td>
 			    <td><?php echo $emp['amount'] ?></td>
 		  	</tr>}
-	      ?>
+	      <?php endforeach; ?>
 	    </tbody>
     </table>
   </section>
