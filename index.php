@@ -11,15 +11,12 @@ if($db)
 else
 {echo "Failed";}
 
-$sql =<<<EOF
-   CREATE TABLE IF NOT EXISTS customers
-   (USERNAME TEXT,
-    EMAIL TEXT  NOT NULL UNIQUE Primary Key,
-    CURRENT_BALANCE REAL); 
-EOF;
+$sql =INSERT INTO customers VALUES("Kundan","candyboy6646@gmail.com",11000),("Ravi","ravichapri512@gmail.com",20000),("Amit","amitsingh123@gmail.com",10000)("sunil","suniltygi129@gmail.com",5000)("Ambani","ambani432@gmail.com",20000000),
+("Neha","neha342@gmail.com",30000),("Priya","priya765@gmail.com",2000),("Gunjan","gunjan463@gmail.com",42000),("Jhony","jhony879@gmail.com",70000),("Meena","meena908@gmail.com",1000);
+
  
 $ret = pg_query($db, $sql);
    pg_close($db); 
-include_once("Homepage.html");
+include_once("homepage.html");
 
 ?>
