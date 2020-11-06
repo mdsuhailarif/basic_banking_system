@@ -9,14 +9,4 @@ if($db)
 {echo "connected";}
 else {echo "failed";}
 
-$sql = "SELECT * FROM customers";
-			$result = pg_query($db,$sql);
-			if (pg_num_rows($result) > 0) {
-			while($row = pg_fetch_assoc($result)) 
-			{ echo "<tr><td>" . $row['username']. "</td><td>" . $row[email] . "</td><td>" . $row['current_balance']. "</td></tr>"; }
-			echo "</table>";
-			} else { echo "0 results"; }
-			pg_close($db);
-
-
 ?>
