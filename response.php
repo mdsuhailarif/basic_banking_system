@@ -6,11 +6,12 @@ $host        = "host = ec2-52-73-199-211.compute-1.amazonaws.com";
 
    $db = pg_connect( "$host $port $dbname $credentials"  );
 
-<?php
-   
-   public function getEmployees() {
+
+  public function getEmployees() {
 		$sql = "SELECT * FROM customers";
 		$queryRecords = pg_query($db, $sql);
 		$data = pg_fetch_all($queryRecords);
 		return $data;
 	}
+
+<?php
