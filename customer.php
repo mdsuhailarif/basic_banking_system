@@ -89,7 +89,6 @@
 			$rs = pg_query($db, $query);
 			if(!$rs)
 			{ echo "failed";}
-			 else {echo "success<br>";}
 			 $bp = pg_fetch_row($rs);
 			 if(!$bp)
 				 {
