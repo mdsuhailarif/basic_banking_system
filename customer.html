@@ -74,15 +74,6 @@
 		    </tr>
 		    	<?php
 			include_once("response.php");
-			$sql = "SELECT * FROM customers";
-			$result = pg_query($db,$sql);
-			if (pg_num_rows($result) > 0) {
-			// output data of each row
-			while($row = pg_fetch_assoc($result)) 
-			{ echo "<tr><td>" . $row['username']. "</td><td>" . $row[email] . "</td><td>" . $row['current_balance']. "</td></tr>"; }
-			echo "</table>";
-			} else { echo "0 results"; }
-			pg_close($db);
 			?>
     </table>
   </section>
