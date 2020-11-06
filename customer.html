@@ -75,19 +75,17 @@
 		    </tr>
 	    </thead>
 	    <tbody>
-		    <?php  
-			include('response.php');
-   		 	$emps = getEmployees();
-
-		foreach($emps as $key)
-		{
-		    	echo "<tr>";
-			    echo "<td>" .$key['username']. "</td>";
-			    echo "<td>" .$key['email']. "</td>";
-			    echo "<td>" .$key['current_balance']. "</td>";
-		  	echo "</tr>";
-		}
-	      ?>
+		    <?php
+include_once("response.php");
+$sql = "SELECT * FROM customers";
+$result = pg_query($db,$sql);
+if ($result->num_rows > 0) {
+// output data of each row
+while($row = $result->pg_fetch_assoc()) {
+echo "<tr><td>" . $row["id"]. "</td><td>" . $row["username"] . "</td><td>" . $row["password"]. "</td></tr>"; }
+} else { echo "0 results"; }
+pg_close($db);
+?>
 	    </tbody>
     </table>
   </section>
