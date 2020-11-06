@@ -6,11 +6,11 @@ $host        = "host = ec2-52-73-199-211.compute-1.amazonaws.com";
 
    $db = pg_connect( "$host $port $dbname $credentials"  );
 
-$sql = "UPDATE customers SET current_balance='$_POST[amount]' WHERE email = '$_POST[email])'";
+$sql = "UPDATE customers SET current_balance='$_POST[amount]' WHERE email = '$_POST[email]'";
 
    		$ret = pg_query( $sql);
    		if(!$ret) {
-   		   echo "Udation failed";
+   		   echo "Updation failed";
    		} 
 		 else {
    		   header("location: customer.html ");
