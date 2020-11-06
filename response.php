@@ -31,7 +31,7 @@ $sql = "UPDATE customers SET current_balance='$_POST[amount]' WHERE email = '$_P
 			   pg_close($db);		 
 			 
 			 
-   		   	header("location: customer.html ");
+   		   	include_once("customer.html ");
    			}
 
 
