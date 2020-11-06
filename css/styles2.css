@@ -12,6 +12,11 @@
   padding-top: 10%;
 }
 
+.main-heading{
+  font-size: 2rem;
+  color:#fff;
+}
+
 .covid-text{
   text-align: center;
   padding-top: 1px;
