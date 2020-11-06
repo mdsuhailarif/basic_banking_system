@@ -85,7 +85,6 @@
 			while($row = pg_fetch_row($result)) 
 				{ echo "<tr><td>"; echo"$row[0]"; echo"</td><td>"; echo"$row[1]"; echo"</td><td>"; echo"$row[2]"; echo"</td></tr>"; }
 			echo "</table>"; 
-			}
 			pg_close($db);
 			?>
     </table>
