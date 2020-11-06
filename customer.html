@@ -67,26 +67,23 @@
   <section id="customer-table">
     <h1>Information of our customers</h1>
     <table id="employee_grid" class="table" width="100%" cellspacing="0">
-	    <thead>
 		    <tr>
 			    <th>Name</th>
 			    <th>Email</th>
 			    <th>balance</th>
 		    </tr>
-	    </thead>
-	    <tbody>
-		    <?php
-include_once("response.php");
-$sql = "SELECT * FROM customers";
-$result = pg_query($db,$sql);
-if ($result->num_rows > 0) {
-// output data of each row
-while($row = $result->pg_fetch_assoc()) {
-echo "<tr><td>" . $row["id"]. "</td><td>" . $row["username"] . "</td><td>" . $row["password"]. "</td></tr>"; }
-} else { echo "0 results"; }
-pg_close($db);
-?>
-	    </tbody>
+		    	<?php
+			include_once("response.php");
+			$sql = "SELECT * FROM customers";
+			$result = pg_query($db,$sql);
+			if (pg_num_rows($result) > 0) {
+			// output data of each row
+			while($row = pg_fetch_assoc($result)) 
+			{ echo "<tr><td>" . $row['username']. "</td><td>" . $row[email] . "</td><td>" . $row['current_balance']. "</td></tr>"; }
+			echo "</table>";
+			} else { echo "0 results"; }
+			pg_close($db);
+			?>
     </table>
   </section>
 
