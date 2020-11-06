@@ -13,7 +13,28 @@ $sql = "UPDATE customers SET current_balance='$_POST[amount]' WHERE email = '$_P
    		   echo "Updation failed";
    		} 
 		 else {
-   		   header("location: customer.html ");
-   		}
+			$query = "SELECT * FROM customers"; 
+			$rs = pg_query($db, $query);
+			if(!$rs)
+			{ echo "failed";}
+			 else {echo "success<br>";}
+			 $bp = pg_fetch_row($rs);
+			 if(!$bp)
+				 {
+   		   echo "Fetch failed";
+   		} 
+				 
+			echo "<table>";
+			while ($row = pg_fetch_row($rs))  	
+			 { echo "<tr><td>"; echo "$row[0]"; echo "</td> <td>"; echo "$row[1]"; echo "</td> <td>"; echo"$row[2]"; echo"</td></tr>"; }
+			 echo "</table>";	
+			   pg_close($db);		 
+			 
+			 
+   		   	header("location: customer.html ");
+   			}
+
+
+
 
 ?>
