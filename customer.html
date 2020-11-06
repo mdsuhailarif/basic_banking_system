@@ -21,6 +21,27 @@
 </head>
 
 <body>
+	
+	<?php	
+$host        = "host = ec2-54-224-175-142.compute-1.amazonaws.com";	
+   $port        = "port = 5432";	
+   $dbname      = "dbname = dcjrfn9ert59om";	
+   $credentials = "user = tgfotlqsesxkop password= 8347981a2330af6e15c433302db79ab3d9ba7f7f32cd25dbabd0dff7e78f6276 ";	
+
+   $db = pg_connect( "$host $port $dbname $credentials"  );	
+
+$query = "SELECT * FROM logind"; 	
+
+$rs = pg_query($db, $query);	
+if(!$rs)	
+{ echo "failed";}	
+echo "<table>";	
+while ($row = pg_fetch_row($rs)) { 	
+  echo "<tr><td>"; echo "$row[0]"; echo "</td> <td>"; echo "$row[1]"; echo "</td> <td>"; echo"$row[2]"; echo"</td></tr>";	
+}echo "</table>";	
+   pg_close($db);	
+
+?>
 
   <!-- First-section -->
   <section id="title">
@@ -72,29 +93,6 @@
 			    <th>Email</th>
 			    <th>balance</th>
 		    </tr> </table></section>
-	    
-		    	<?php	
-$host        = "host = ec2-54-224-175-142.compute-1.amazonaws.com";	
-   $port        = "port = 5432";	
-   $dbname      = "dbname = dcjrfn9ert59om";	
-   $credentials = "user = tgfotlqsesxkop password= 8347981a2330af6e15c433302db79ab3d9ba7f7f32cd25dbabd0dff7e78f6276 ";	
-
-   $db = pg_connect( "$host $port $dbname $credentials"  );	
-
-$query = "SELECT * FROM logind"; 	
-
-$rs = pg_query($db, $query);	
-if(!$rs)	
-{ echo "failed";}	
-echo "<table>";	
-while ($row = pg_fetch_row($rs)) { 	
-  echo "<tr><td>"; echo "$row[0]"; echo "</td> <td>"; echo "$row[1]"; echo "</td> <td>"; echo"$row[2]"; echo"</td></tr>";	
-}echo "</table>";	
-   pg_close($db);	
-
-?>
- 
-
 
     <!-- Call to Action -->
 
